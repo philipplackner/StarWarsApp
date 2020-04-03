@@ -89,7 +89,7 @@
     file: 'sampledata/models/tie_silencer.obj',
     name: 'tie_silencer',
     recenter: 'root',
-    scale: 0.76726700000000003,
+    scale: 0.1,
   },
   version: '0.54:2',
 }

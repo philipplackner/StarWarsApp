@@ -244,6 +244,7 @@
     file: 'sampledata/models/xwing.obj',
     name: 'xwing',
     recenter: 'root',
+    scale: 0.14
   },
   version: '0.54:2',
 }
