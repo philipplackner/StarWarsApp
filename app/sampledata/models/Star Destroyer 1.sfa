@@ -1,0 +1,50 @@
+{
+  materials: [
+    {
+      name: 'Material01',
+      parameters: [
+        {
+          baseColor: 'color',
+        },
+        {
+          baseColorTint: [
+            0.80000000000000004,
+            0.80000000000000004,
+            0.80000000000000004,
+            1,
+          ],
+        },
+        {
+          metallic: 1,
+        },
+        {
+          roughness: 1,
+        },
+        {
+          opacity: null,
+        },
+      ],
+      source: 'build/sceneform_sdk/default_materials/obj_material.sfm',
+    },
+  ],
+  model: {
+    attributes: [
+      'Position',
+      'TexCoord',
+      'Orientation',
+    ],
+    collision: {},
+    file: 'sampledata/models/Star Destroyer 1.obj',
+    name: 'Star Destroyer 1',
+    recenter: 'root',
+    scale: 0.010822,
+  },
+  samplers: [
+    {
+      file: 'sampledata/models\\color.png',
+      name: 'color',
+      pipeline_name: 'color.png',
+    },
+  ],
+  version: '0.54:2',
+}

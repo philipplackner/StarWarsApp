@@ -3,6 +3,26 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'com.google.ar.sceneform.plugin'
 
+sceneform.asset(
+        'sampledata/models/Star Destroyer 1.obj',
+        'default',
+        'sampledata/models/Star Destroyer 1.sfa',
+        'src/main/res/raw/star_destroyer'
+)
+
+sceneform.asset(
+        'sampledata/models/tie_silencer.obj',
+        'default',
+        'sampledata/models/tie_silencer.sfa',
+        'src/main/res/raw/tie_silencer'
+)
+
+sceneform.asset(
+        'sampledata/models/xwing.obj',
+        'default',
+        'sampledata/models/xwing.sfa',
+        'src/main/res/raw/xwing'
+)
 
 android {
     compileSdkVersion 29
