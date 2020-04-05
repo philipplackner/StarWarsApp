@@ -20,6 +20,8 @@ class MainActivity : AppCompatActivity() {
         R.raw.tie_silencer,
         R.raw.xwing
     )
+    private var curCameraPosition = Vector3.zero()
+    private val nodes = mutableListOf<RotatingNode>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,6 +31,17 @@ class MainActivity : AppCompatActivity() {
         arFragment.setOnTapArPlaneListener { hitResult, _, _ ->
             val randomId = modelResourceIds.random()
             loadModelAndAddToScene(hitResult.createAnchor(), randomId)
+        }
+
+        arFragment.arSceneView.scene.addOnUpdateListener {
+            updateNodes()
+        }
+    }
+
+    private fun updateNodes() {
+        curCameraPosition = arFragment.arSceneView.scene.camera.worldPosition
+        for(node in nodes) {
+            node.worldPosition = Vector3(curCameraPosition.x, node.worldPosition.y, curCameraPosition.z)
         }
     }
 
@@ -62,5 +75,6 @@ class MainActivity : AppCompatActivity() {
             localRotation = Quaternion.eulerAngles(Vector3(0f, spaceship.rotationDegrees, 0f))
         }
         arFragment.arSceneView.scene.addChild(anchorNode)
+        nodes.add(rotatingNode)
     }
 }

@@ -37,7 +37,7 @@
     file: 'sampledata/models/Star Destroyer 1.obj',
     name: 'Star Destroyer 1',
     recenter: 'root',
-    scale: 0.002,
+    scale: 0.004,
   },
   samplers: [
     {
